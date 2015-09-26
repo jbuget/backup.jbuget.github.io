@@ -1,0 +1,155 @@
+html {
+    overflow: hidden;
+    background: #f3f5f8;
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: inherit;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navigation */
+
+#navigation {
+    z-index: 10000;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #324a71;
+    overflow: hidden;
+    width: 80px;
+}
+
+#navigation a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#navigation ul,
+#navigation li {
+    padding: 0;
+    margin: 0;
+}
+#navigation ul {
+    list-style-type: none;
+}
+#navigation li a span.glyphicon {
+    width: 80px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+#navigation li a span.glyphicon:before {
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 2px;
+}
+#navigation li a:hover {
+    background: #2c446a!important;
+}
+#navigation li.active {
+    background: #263d62!important;
+}
+
+    /* Viewport */
+
+#viewport {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    left: 80px;
+    overflow-y: auto;
+}
+
+#viewport > section {
+    width: 780px;
+    background: #fff;
+    height: 100%;
+}
+
+section > article {
+    background: #fff;
+    padding: 20px 50px;
+}
+
+article > header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+article > header > h1 {
+    margin-bottom: 20px;
+}
+article > header > .article-information {
+    border-top: 1px solid #eee;
+    border-left: none;
+    border-right: none;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+/*
+.social-data > .social-link {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    display: inline-block;
+    font-size: x-large;
+    text-align: center;
+    padding-top: 3px;
+}
+.social-data .social-link.facebook {
+    background-color: #375593;
+}
+.social-data .social-link.twitter {
+    background-color: #00aced;
+}
+.social-data .social-link.google-plus {
+    background-color: #d14836;
+}
+.social-data .social-link.linkedin {
+    background-color: #0082b4;
+}
+*/
+
+
+
+/* ============== */
+/* RESPONSIVENESS */
+/* ============== */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+
+    #navigation {
+        width: 215px;
+    }
+
+    #viewport {
+        left: 215px;
+    }
+}
