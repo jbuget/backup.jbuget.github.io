@@ -33,24 +33,24 @@
 <body>
 
 <div id="app">
-    <div class="container">
+    <div class="container-fluid">
         <section class="row">
             <div class="col-md-12">
                 <h1>Le blog de Jérémy Buget</h1>
-                <section id="articles"></section>
+                <section id="article-list"></section>
             </div>
         </section>
     </div>
 </div>
 
-<script id="articles-template" type="text/x-handlebars-template">
+<script id="article-list-template" type="text/x-handlebars-template">
     {{#each articles}}
     <article>
         <head>
-            <h2>{{title}}</h2>
+            <h2>{{articleTitle}}</h2>
         </head>
         <div class="content">
-            {{content}}
+            {{articleContent}}
         </div>
     </article>
     {{/each}}
