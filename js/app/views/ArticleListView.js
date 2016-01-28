@@ -2,7 +2,7 @@ define([
     'jquery',
     'backbone',
     'handlebars',
-    'app/templates/ArticleListViewHelper'
+    'app/templates/ArticleListTemplate'
 ], function ($, Backbone, Handlebars) {
 
     'use strict';
