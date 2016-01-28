@@ -1,0 +1,27 @@
+#app {
+}
+
+
+/* ============== */
+/* RESPONSIVENESS */
+/* ============== */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+
+    #navigation {
+        width: 215px;
+    }
+
+    #viewport {
+        left: 215px;
+    }
+}

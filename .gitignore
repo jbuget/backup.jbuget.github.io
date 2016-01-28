@@ -29,3 +29,5 @@ node_modules
 # Intellij IDEA
 .idea
 *.iml
+
+*.DS_Store

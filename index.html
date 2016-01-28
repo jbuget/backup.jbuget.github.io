@@ -4,68 +4,57 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Jérémy Buget - Blog</title>
+    <title>Le blog de Jérémy Buget</title>
 
-    <!-- Lib -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- ==== -->
+    <!-- LIBS -->
+    <!-- ==== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- App -->
-    <link href="app/css/main.css" rel="stylesheet">
+    <!-- === -->
+    <!-- APP -->
+    <!-- === -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script data-main="js/app" src="js/lib/require/require.js"></script>
+
 </head>
 <body>
 
 <div id="app">
-
-    <nav id="navigation">
-        <ul>
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Blog</a></li>
-            <li class="active"><a href="/about.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>À propos</a></li>
-            <li><a href="/contact.html"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Contact</a></li>
-        </ul>
-    </nav>
-
-    <div id="viewport">
-        <section id="article-detail">
-            <article>
-                <header>
-                    <h1>Lorem ipsum dolor sit amet</h1>
-                </header>
-                <div class="article-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed vehicula arcu, eget iaculis erat. Ut malesuada nisl ac suscipit dapibus. Nulla et pretium sapien, ut ornare turpis. Donec convallis nec risus id interdum. In volutpat sapien in odio sodales, in bibendum orci mollis. Donec a rutrum tortor, sodales tincidunt dolor. Quisque in sem at massa efficitur tristique ut et leo. Curabitur sed felis ligula. Proin vestibulum, enim volutpat accumsan facilisis, magna lorem blandit est, in cursus quam nunc id risus. Nam est sapien, tempus eu metus at, sollicitudin porta diam. Aliquam porttitor purus sit amet felis consectetur, et lacinia quam pellentesque. Nullam fermentum lacus in lacus fringilla, non aliquam mi tempus. Curabitur ut ante tortor. Praesent neque ante, mollis consequat lectus vitae, lobortis pretium turpis. Integer congue pharetra purus, non feugiat mauris rutrum et.</p>
-                    <h2>Fusce at volutpat nisi</h2>
-                    <p>Donec porta magna vitae sem feugiat, eget rhoncus sem laoreet. Phasellus nec tellus ac neque iaculis fermentum sit amet a nibh. Integer sed ultricies est, eu sagittis augue. Nulla non ante tellus. Nunc sit amet volutpat augue, sit amet bibendum nunc. Fusce at volutpat nisi, a ullamcorper tellus. Suspendisse sagittis scelerisque erat sit amet pellentesque. Donec et tempus justo.</p>
-                    <p>Proin interdum efficitur ullamcorper. Nulla ac rhoncus magna, in auctor nulla. Curabitur ac porta est. Vivamus vel eros maximus, mollis est quis, posuere tortor. Curabitur aliquam sodales lacus, sed vulputate sapien consectetur sed. Nulla facilisis, odio vel ultrices porta, magna orci ultrices urna, sit amet sagittis massa tellus a felis. Donec lobortis nisl eu dolor gravida scelerisque in non velit. Ut id turpis interdum, tempus tellus sed, imperdiet metus. Mauris venenatis nibh at urna pellentesque porta. Pellentesque nibh erat, sollicitudin eu quam ut, vulputate hendrerit neque. Sed fermentum sem ut quam ullamcorper tincidunt. Nam in rhoncus tortor. Phasellus eu lectus in magna pharetra iaculis eu in erat. Aenean lobortis, eros sit amet suscipit auctor, nisi lectus maximus tortor, tincidunt mattis sem sapien quis nunc.</p>
-                    <h2>Pellentesque mollis quam at nulla finibus</h2>
-                    <p>Fusce a hendrerit ligula. Donec enim arcu, semper sit amet dolor eu, tincidunt semper arcu. Pellentesque mollis quam at nulla finibus, a malesuada enim ornare. Mauris bibendum tellus a ipsum ornare, vel mollis dolor cursus. Fusce pellentesque id magna in euismod. Aenean ac tellus faucibus leo rutrum dapibus eu non nunc. Praesent hendrerit blandit justo. Nulla vel turpis mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tincidunt velit eros, a pretium dui hendrerit in. Phasellus at dolor bibendum, porttitor orci a, facilisis mi. In accumsan mauris eu eleifend pretium. Aliquam erat volutpat. Integer tristique laoreet quam. Sed velit purus, rutrum vel dui non, bibendum laoreet nunc.</p>
-                    <p>Fusce sed nisi vel est pretium maximus. Nam auctor lorem quis purus pulvinar pellentesque. Duis pretium ut mi a congue. Cras eu tincidunt odio. Cras tristique luctus nibh eget volutpat. Aenean auctor egestas orci, id viverra magna feugiat ut. Sed sed purus nisl. In eu tincidunt libero. Aliquam felis felis, sodales ut fringilla in, elementum ac neque. Proin et aliquam nisi. In ultrices elit eget tellus molestie, id dapibus ex gravida. Donec accumsan sollicitudin leo id rhoncus. Donec auctor, augue ac elementum tempus, odio nisi venenatis magna, quis vestibulum lacus risus id velit. Cras consectetur cursus risus ut congue. Nulla facilisi.</p>
-                </div>
-                <footer></footer>
-            </article>
+    <div class="container">
+        <section class="row">
+            <div class="col-md-12">
+                <h1>Le blog de Jérémy Buget</h1>
+                <section id="articles"></section>
+            </div>
         </section>
     </div>
-
 </div>
 
-
-<!-- Lib -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/prismic/prismic.io.min.js"></script>
-<script src="lib/prismic/prismic.io-tools.js"></script>
-
-<!-- === -->
-<!-- App -->
-<!-- === -->
-<script src="app/js/main.js"></script>
-<script src="app/js/prismic/prismic-configuration.js"></script>
-<script src="app/js/prismic/prismic-helpers.js"></script>
-<script src="app/js/prismic/prismic-templates.js"></script>
+<script id="articles-template" type="text/x-handlebars-template">
+    {{#each articles}}
+    <article>
+        <head>
+            <h2>{{title}}</h2>
+        </head>
+        <div class="content">
+            {{content}}
+        </div>
+    </article>
+    {{/each}}
+</script>
 
 </body>
 </html>
