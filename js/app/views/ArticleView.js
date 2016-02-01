@@ -8,21 +8,26 @@ define([
 
     'use strict';
 
-    var ArticleListView = Backbone.View.extend({
+    var ArticleView = Backbone.View.extend({
 
         el: '#app',
 
-        collection: new ArticleList(),
-
-        initialize: function () {
+        initialize: function (uid) {
             var self = this;
             self.registerFormatters();
+            self.model = new Article();
             self.collection.fetch({
+                uid: uid,
                 success: function () { self.render(); }
             });
         },
 
         registerFormatters: function () {
+            Handlebars.registerHelper('articleUid', function () {
+                var html = this.getUid();
+                return new Handlebars.SafeString(html);
+            });
+
             Handlebars.registerHelper('articleTitle', function () {
                 var html = this.getTitle();
                 return new Handlebars.SafeString(html);
@@ -36,14 +41,15 @@ define([
 
         render: function () {
             var self = this;
-            var context = { articles: this.collection.models };
-            TemplateLoader.loadTemplate('article-list.hbs', context, function (html) {
+            var context = { article: this.model };
+            TemplateLoader.loadTemplate('article.hbs', context, function (html) {
                 self.$el.html(html);
                 return this;
             });
         }
+
+
     });
 
-    return ArticleListView;
-
+    return ArticleView;
 });

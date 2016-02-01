@@ -1,3 +1,14 @@
+body {
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+}
+
+h1:after {
+    border-bottom: 1px solid #AAA;
+    display: block;
+    content: '';
+    margin-top: 10px;
+}
+
 #app {
 }
 
@@ -11,17 +22,8 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
 }
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
-
-    #navigation {
-        width: 215px;
-    }
-
-    #viewport {
-        left: 215px;
-    }
 }

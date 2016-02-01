@@ -26,5 +26,5 @@ requirejs.config({
 
 // Load the main app module to start the app
 requirejs(['jquery', 'bootstrap', 'underscore', 'backbone', 'handlebars', 'prismic'], function () {
-    requirejs(["app/main"]);
+    requirejs(["app/Main"]);
 });
