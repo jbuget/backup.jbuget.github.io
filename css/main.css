@@ -83,11 +83,7 @@ a:hover {
 }
 
 #article-list-view article header span.date {
-    color: #bababa;
-}
-
-#article-list-view article header span.author {
-    color: #FF8400;
+    color: #FF9900;
 }
 
 /* Article view */
@@ -103,16 +99,13 @@ a:hover {
 }
 
 #article-view article header span.date {
-    color: #bababa;
-}
-
-#article-view article header span.author {
-    color: #FF8400;
+    color: #FF9900;
 }
 
 #article-view article header h1 {
     font-weight: bold;
     font-family: 'LatoWebThin', Verdana, sans-serif;
+    text-shadow: 1px 2px #333;
 }
 
 #article-view article .content {
