@@ -20,6 +20,11 @@ define([
         },
 
         registerFormatters: function () {
+            Handlebars.registerHelper('articleUid', function () {
+                var html = this.getUid();
+                return new Handlebars.SafeString(html);
+            });
+
             Handlebars.registerHelper('articleTitle', function () {
                 var html = this.getTitle();
                 return new Handlebars.SafeString(html);
@@ -41,7 +46,7 @@ define([
                         },
                         success: function (html) {
                             self.$el.html(html);
-                            return this;
+                            return self;
                         }
                     });
                 }

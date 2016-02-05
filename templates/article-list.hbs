@@ -1,18 +1,21 @@
 <section id="article-list-view">
-    {{#each articles}}
-        <article>
-            <header>
-                <h2><a href="">{{articleTitle}}</a></h2>
-                <p>
-                    <span class="date">5 février 2016 / </span>
-                    <span class="author">Jérémy Buget</span>
-                </p>
-                <hr>
-            </header>
-            <div class="content">
-                {{articleExcerpt}}
-                <p><a href="">Lire la suite &gt;</a></p>
-            </div>
-        </article>
-    {{/each}}
+    <div class="container">
+        {{#each articles}}
+            <article>
+                <header>
+                    <h2><a href="#articles/{{articleUid}}">{{articleTitle}}</a></h2>
+
+                    <p>
+                        par <span class="author">Jérémy Buget</span>
+                        le <span class="date">5 février 2016</span>
+                    </p>
+                    <hr>
+                </header>
+                <div class="content">
+                    {{articleExcerpt}}
+                    <p><a href="#articles/{{articleUid}}">Lire la suite &gt;</a></p>
+                </div>
+            </article>
+        {{/each}}
+    </div>
 </section>

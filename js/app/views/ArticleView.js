@@ -3,8 +3,8 @@ define([
     'backbone',
     'handlebars',
     'app/templates/TemplateLoader',
-    'app/collections/ArticleList'
-], function ($, Backbone, Handlebars, TemplateLoader, ArticleList) {
+    'app/models/Article'
+], function ($, Backbone, Handlebars, TemplateLoader, Article) {
 
     'use strict';
 
@@ -12,40 +12,65 @@ define([
 
         el: '#app',
 
+        uid: null,
+
         initialize: function (uid) {
             var self = this;
             self.registerFormatters();
-            self.model = new Article();
-            self.collection.fetch({
-                uid: uid,
-                success: function () { self.render(); }
-            });
+            self.uid = uid;
         },
 
         registerFormatters: function () {
-            Handlebars.registerHelper('articleUid', function () {
-                var html = this.getUid();
+            var self = this;
+            Handlebars.registerHelper('_articleUid', function () {
+                var html = self.model.getUid();
                 return new Handlebars.SafeString(html);
             });
 
-            Handlebars.registerHelper('articleTitle', function () {
-                var html = this.getTitle();
+            Handlebars.registerHelper('_articleTitle', function () {
+                var html = self.model.getTitle();
                 return new Handlebars.SafeString(html);
             });
 
-            Handlebars.registerHelper('articleContent', function () {
-                var html = this.getContent();
+            Handlebars.registerHelper('_articleExcerpt', function () {
+                var html = self.model.getExcerpt();
+                return new Handlebars.SafeString(html);
+            });
+
+            Handlebars.registerHelper('_articleContent', function () {
+                var html = self.model.getContent();
                 return new Handlebars.SafeString(html);
             });
         },
 
         render: function () {
             var self = this;
-            var context = { article: this.model };
-            TemplateLoader.loadTemplate('article.hbs', context, function (html) {
-                self.$el.html(html);
-                return this;
+            Prismic.Api('https://jbuget.cdn.prismic.io/api', function (err, Api) {
+                Api.form('everything')
+                    .ref(Api.master())
+                    .query(Prismic.Predicates.at("my.article.uid", self.uid)).submit(function (err, response) {
+                        //self.models = response.results;
+                        if (err && options && options.error) {
+                            options.error(self, response, options)
+                        }
+                        if (response) {
+                            var document = response.results[0];
+                            self.model = new Article(document);
+                            TemplateLoader.loadTemplate('article.hbs', {
+                                context: {
+                                },
+                                success: function (html) {
+                                    self.$el.html(html);
+                                    return self;
+                                }
+                            });
+                        }
+                    });
             });
+        },
+
+        _removeElement: function () {
+            this.$el.empty();
         }
 
 

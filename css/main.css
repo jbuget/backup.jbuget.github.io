@@ -21,7 +21,6 @@ body {
 
 a,
 a:hover {
-    color: #FF8400;
     text-decoration: none;
     color: #2CADBE;
 }
@@ -41,7 +40,6 @@ a:hover {
 
 #body {
     background-color: #f4f4f4;
-    padding-top: 20px;
 }
 #footer {
     border-top: 1px solid #e5e5e5;
@@ -58,6 +56,8 @@ a:hover {
     color: #fff !important;
 }
 
+/* Article list view */
+
 #article-list-view {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -69,22 +69,71 @@ a:hover {
     -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
     -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
-    padding: 10px 30px 20px 30px;
-}
-
-#article-list-view article header h2 a {
-    color: #333 !important;
-}
-#article-list-view article header span.date {
-    color: #bababa;
-}
-#article-list-view article header span.author {
-    color: #2CADBE;
-    color: #FF8400;
+    padding: 10px 40px 20px;
 }
 
 #article-list-view article header h1 {
     font-weight: 600;
+}
+
+#article-list-view article header h2 a {
+    font-weight: bold;
+    font-family: 'LatoWebThin', Verdana, sans-serif;
+    color: #333 !important;
+}
+
+#article-list-view article header span.date {
+    color: #bababa;
+}
+
+#article-list-view article header span.author {
+    color: #FF8400;
+}
+
+/* Article view */
+
+#article-view {
+}
+
+#article-view article header {
+    background-color: #085a78;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0 140px 0;
+}
+
+#article-view article header span.date {
+    color: #bababa;
+}
+
+#article-view article header span.author {
+    color: #FF8400;
+}
+
+#article-view article header h1 {
+    font-weight: bold;
+    font-family: 'LatoWebThin', Verdana, sans-serif;
+}
+
+#article-view article .content {
+    margin: -100px 0 30px 0;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    padding: 40px;
+}
+
+#article-view article .content .excerpt {
+    /*font-weight: 600;*/
+    font-family: 'LatoWebBlack', Verdana, sans-serif;
+}
+
+#article-view article .content h2 {
+    font-family: 'LatoWebLight', sans-serif;
+}
+#article-view article .content img {
+    max-width: 100%;
 }
 
 /* ============== */
@@ -100,9 +149,7 @@ a:hover {
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
-    #header .navbar > .container,
-    #body > .container,
-    #footer > .container {
-        width: 900px;
+    .container {
+        max-width: 900px;
     }
 }

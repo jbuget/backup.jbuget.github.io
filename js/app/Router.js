@@ -1,8 +1,9 @@
 define([
     'backbone',
     'app/views/ArticleListView',
+    'app/views/ArticleView',
     'app/views/AboutView'
-], function (Backbone, ArticleListView, AboutView) {
+], function (Backbone, ArticleListView, ArticleView, AboutView) {
 
     'use strict';
 
@@ -25,7 +26,8 @@ define([
         },
 
         article: function (uid) {
-
+            var view = new ArticleView(uid);
+            this.loadView(view);
         },
 
         search: function (query, page) {
@@ -44,6 +46,7 @@ define([
             }
             this.view = view;
             this.view.render();
+            return this.view;
         }
 
     });
