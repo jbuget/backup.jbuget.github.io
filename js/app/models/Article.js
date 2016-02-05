@@ -21,8 +21,14 @@ define([
             return this.document.getText('article.title');
         },
 
+        getExcerpt: function () {
+            var excerpt = this.document.getStructuredText('article.excerpt');
+            return excerpt ? excerpt.asHtml({}) : this.getContent();
+        },
+
         getContent: function() {
-            return this.document.getStructuredText('article.content').asHtml({});
+            var content = this.document.getStructuredText('article.content');
+            return content ? content.asHtml({}) : "<p>[The article is empty]</p>";
         },
 
         fetch: function (options) {

@@ -1,11 +1,17 @@
 <section id="article-list-view">
     {{#each articles}}
         <article>
-            <head>
-                <h1>{{articleTitle}}</h1>
-            </head>
+            <header>
+                <h2><a href="">{{articleTitle}}</a></h2>
+                <p>
+                    <span class="date">5 février 2016 / </span>
+                    <span class="author">Jérémy Buget</span>
+                </p>
+                <hr>
+            </header>
             <div class="content">
-                {{articleContent}}
+                {{articleExcerpt}}
+                <p><a href="">Lire la suite &gt;</a></p>
             </div>
         </article>
     {{/each}}

@@ -16,7 +16,6 @@ define([
                 Api.form('everything')
                     .ref(Api.master())
                     .query(Prismic.Predicates.at("document.type", "article")).submit(function (err, response) {
-                        //self.models = response.results;
                         if (err && options && options.error) {
                             options.error(self.models, response, options)
                         }

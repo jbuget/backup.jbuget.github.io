@@ -1,9 +1,10 @@
 define([
-    'app/views/ArticleListView'
-], function (ArticleListView) {
+    'backbone',
+    'app/Router'
+], function (Backbone, Router) {
 
     'use strict';
 
-    new ArticleListView();
-
+    new Router();
+    Backbone.history.start();
 });

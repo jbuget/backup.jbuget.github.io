@@ -17,9 +17,6 @@ define([
         initialize: function () {
             var self = this;
             self.registerFormatters();
-            self.collection.fetch({
-                success: function () { self.render(); }
-            });
         },
 
         registerFormatters: function () {
@@ -28,20 +25,33 @@ define([
                 return new Handlebars.SafeString(html);
             });
 
-            Handlebars.registerHelper('articleContent', function () {
-                var html = this.getContent();
+            Handlebars.registerHelper('articleExcerpt', function () {
+                var html = this.getExcerpt();
                 return new Handlebars.SafeString(html);
             });
         },
 
         render: function () {
             var self = this;
-            var context = { articles: this.collection.models };
-            TemplateLoader.loadTemplate('article-list.hbs', context, function (html) {
-                self.$el.html(html);
-                return this;
+            self.collection.fetch({
+                success: function () {
+                    TemplateLoader.loadTemplate('article-list.hbs', {
+                        context: {
+                            articles: self.collection.models
+                        },
+                        success: function (html) {
+                            self.$el.html(html);
+                            return this;
+                        }
+                    });
+                }
             });
+        },
+
+        _removeElement: function() {
+            this.$el.empty();
         }
+
     });
 
     return ArticleListView;

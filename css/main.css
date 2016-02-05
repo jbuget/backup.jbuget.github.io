@@ -1,17 +1,91 @@
+@charset "utf-8";
+
+.palette {
+    color: #2bb24c; /* feedly */
+    color: #20c05c; /* evernote */
+    color: #64b46a; /* prismic */
+    color: #2ecc71; /* panda */
+    color: #5AA057; /* some green */
+    color: #7db96b; /* vert elCurator */
+
+    color: #f79f55; /* orange elCurator */
+
+    color: #6C6C6C; /* gris elCurator */
+}
+
 body {
-    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    font-family: LatoWeb, sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
 }
 
-h1:after {
-    border-bottom: 1px solid #AAA;
-    display: block;
-    content: '';
-    margin-top: 10px;
+a,
+a:hover {
+    color: #FF8400;
+    text-decoration: none;
+    color: #2CADBE;
 }
 
-#app {
+#header .navbar {
+    background-color: #074e68;
+    margin-bottom: 0;
+    color: #fff !important;
+}
+#header .navbar a {
+    color: #fff;
+}
+#header .navbar a:hover {
+    color: #2CADBE;
+    background-color: inherit;
 }
 
+#body {
+    background-color: #f4f4f4;
+    padding-top: 20px;
+}
+#footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 30px 30px 20px 30px;
+    font-size: 13px;
+    color: #999999;
+    background-color: #ffffff;
+}
+
+.navbar-brand {
+    font-family: "Plain Germanica", Verdana, serif;
+    font-size: 30px;
+    padding-top: 25px;
+    color: #fff !important;
+}
+
+#article-list-view {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#article-list-view article {
+    margin: 0 0 30px 0;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    padding: 10px 30px 20px 30px;
+}
+
+#article-list-view article header h2 a {
+    color: #333 !important;
+}
+#article-list-view article header span.date {
+    color: #bababa;
+}
+#article-list-view article header span.author {
+    color: #2CADBE;
+    color: #FF8400;
+}
+
+#article-list-view article header h1 {
+    font-weight: 600;
+}
 
 /* ============== */
 /* RESPONSIVENESS */
@@ -26,4 +100,9 @@ h1:after {
 
 /* Medium devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
+    #header .navbar > .container,
+    #body > .container,
+    #footer > .container {
+        width: 900px;
+    }
 }
