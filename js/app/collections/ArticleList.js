@@ -15,7 +15,8 @@ define([
             Prismic.Api('https://jbuget.cdn.prismic.io/api', function (err, Api) {
                 Api.form('everything')
                     .ref(Api.master())
-                    .query(Prismic.Predicates.at("document.type", "article")).submit(function (err, response) {
+                    .query(Prismic.Predicates.at("document.type", "article"))
+                    .submit(function (err, response) {
                         if (err && options && options.error) {
                             options.error(self.models, response, options)
                         }
