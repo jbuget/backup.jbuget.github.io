@@ -33,7 +33,7 @@ body {
 a,
 a:hover {
     text-decoration: none;
-    color: #2CADBE;
+    color: #FF9800;
 }
 
 #header .navbar {
@@ -67,13 +67,54 @@ a:hover {
     font-size: 30px;
     padding-top: 25px;
     color: #fff !important;
+    text-shadow: 1px 1px #212121;
 }
 
+/* Common */
+
+article h1, h2, h3, h4, h5, h6 {
+    font-family: 'LatoWebThin', Verdana, sans-serif;
+}
+article h1 {
+    color: #212121;
+    font-weight: bold;
+}
+article h2 {
+    font-family: 'LatoWebLight', Verdana, sans-serif;
+    color: #0097A7;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+article h3 {
+    color: #00BCD4;
+}
+article h4 {
+    color: #B2EBF2;
+}
+article h5 {
+    color: #727272;
+}
+article h6 {
+    color: #B6B6B6;
+}
+article img {
+    max-width: 100%;
+}
+article h2,
+article h3,
+article p,
+article ol,
+article ul {
+    margin-bottom: 30px;
+}
+
+/* ================= */
 /* Article list view */
+/* ================= */
 
 #article-list-view {
     padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 #article-list-view article {
@@ -86,12 +127,10 @@ a:hover {
     border-radius: 2px;
 }
 
-#article-list-view article header {
-    margin-bottom: 30px;
-}
-
-#article-list-view article header h1 {
-    font-weight: 600;
+#article-list-view article header h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
 #article-list-view article header h2 a {
@@ -100,64 +139,29 @@ a:hover {
     color: #212121 !important;
 }
 
-#article-list-view article header hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 #article-list-view article header p {
-    color: #FF9900;
-    color: #CB4500;
-    color: #b2b2b2;
-    color: #B6B6B6;
     color: #B2EBF2;
-    font-family: 'LatoWebLight', Verdana, sans-serif;
-    font-weight: 400;
 }
 
 
-
+/* ============ */
 /* Article view */
+/* ============ */
+
 
 #article-view article header {
-    background-color: #16A086;
-    background-color: #1BBC9B;
-    background-color: #00B2A8;
-    background-color: #00BCD4;
-    color: #ffffff;
     text-align: center;
-    padding: 10px 0 130px 0;
-}
-
-#article-view article header h1 {
-    font-weight: bold;
-    font-family: 'LatoWebThin', Verdana, sans-serif;
-}
-
-#article-view article header p {
-    color: #B2EBF2;
+    padding: 10px 0 20px 0;
 }
 
 #article-view article .content {
-    margin: -110px 0 30px 0;
     background: #fff;
     -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
     -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
     padding: 40px;
     border-radius: 2px;
-}
-
-#article-view article .content .excerpt {
-    /*font-weight: 600;*/
-    font-family: 'LatoWebBlack', Verdana, sans-serif;
-}
-
-#article-view article .content h2 {
-    font-family: 'LatoWebLight', sans-serif;
-}
-#article-view article .content img {
-    max-width: 100%;
+    margin-bottom: 30px;
 }
 
 /* ============== */
