@@ -1,28 +1,5 @@
 @charset "utf-8";
 
-.palette {
-    color: #2bb24c; /* feedly */
-    color: #20c05c; /* evernote */
-    color: #64b46a; /* prismic */
-    color: #2ecc71; /* panda */
-    color: #5AA057; /* some green */
-    color: #7db96b; /* vert elCurator */
-
-    color: #f79f55; /* orange elCurator */
-
-    color: #6C6C6C; /* gris elCurator */
-}
-
-.palette2 {
-    color: #16A086;
-    color: #1BBC9B;
-    color: #E77E23;
-    color: #F39C11;
-    color: #F1C40F;
-    color: #2DCC70;
-    color: #27AE61;
-}
-
 body {
     font-family: LatoWeb, sans-serif;
     font-size: 15px;
@@ -33,7 +10,7 @@ body {
 a,
 a:hover {
     text-decoration: none;
-    color: #FF9800;
+    color: #0097A7;
 }
 
 #header .navbar {
