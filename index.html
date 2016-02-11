@@ -1,79 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="fragment" content="!">
-    <title>Le Daily Codeur</title>
+---
+layout: default
+---
 
-    <!-- ==== -->
-    <!-- LIBS -->
-    <!-- ==== -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">-->
-    <!-- Font : Open Sans -->
-    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>-->
-    <!-- Font : Lato : http://www.latofonts.com/lato-free-fonts/ -->
-    <link href='fonts/germanica/germanica.css' rel='stylesheet' type='text/css'>
-    <link href='fonts/lato/latofonts.css' rel='stylesheet' type='text/css'>
+<div class="home">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <p>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </p>
+            <p>
+                {{ post.excerpt }}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
 
-    <!-- === -->
-    <!-- APP -->
-    <!-- === -->
-    <link href="css/palette.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    <script data-main="js/App" src="js/lib/require/require.js"></script>
-
-</head>
-<body>
-
-<div id="viewport">
-
-    <!-- Static navbar -->
-    <header id="header">
-        <nav class="navbar navbar-static-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="">Le Daily <span>Codeur</span></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#about">Archives</a></li>
-                                <li><a href="#about">À propos</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div id="body">
-        <div id="app-wrapper">
-            <div id="app"></div>
-        </div>
-    </div>
 </div>
-
-</body>
-</html>

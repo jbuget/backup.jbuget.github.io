@@ -1,3 +1,9 @@
+#IntelliJ IDEA
+.idea
+
+# SASS
+.sass-cache
+
 # Logs
 logs
 *.log

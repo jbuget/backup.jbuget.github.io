@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+body {
+    font-family: LatoWeb, sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #212121;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #0097A7;
+}
+
+#header .navbar {
+    background-color: #0097A7;
+    margin-bottom: 0;
+    color: #fff !important;
+}
+#header .navbar a {
+    color: #fff;
+}
+#header .navbar a:hover {
+    color: #2CADBE;
+    background-color: inherit;
+}
+
+#body {
+    background-color: #f4f4f4;
+    background-color: #E5E5E5;
+    background-color: #F5F5F5;
+}
+#footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 30px 30px 20px 30px;
+    font-size: 13px;
+    color: #999999;
+    background-color: #ffffff;
+}
+
+.navbar-brand {
+    font-family: "Plain Germanica", Verdana, serif;
+    font-size: 30px;
+    padding-top: 25px;
+    color: #fff !important;
+    text-shadow: 1px 1px #212121;
+}
+
+/* Common */
+
+article h1, h2, h3, h4, h5, h6 {
+    font-family: 'LatoWebThin', Verdana, sans-serif;
+}
+article h1 {
+    color: #212121;
+    font-weight: bold;
+}
+article h2 {
+    font-family: 'LatoWebLight', Verdana, sans-serif;
+    color: #0097A7;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+article h3 {
+    color: #00BCD4;
+}
+article h4 {
+    color: #B2EBF2;
+}
+article h5 {
+    color: #727272;
+}
+article h6 {
+    color: #B6B6B6;
+}
+article img {
+    max-width: 100%;
+}
+article h2,
+article h3,
+article p,
+article ol,
+article ul {
+    margin-bottom: 30px;
+}
+
+/* ================= */
+/* Article list view */
+/* ================= */
+
+#article-list-view {
+    padding-top: 10px;
+}
+
+#article-list-view article {
+    margin: 20px 0 30px 0;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    padding: 10px 40px 20px;
+    border-radius: 2px;
+}
+
+#article-list-view article header h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+#article-list-view article header h2 a {
+    font-weight: bold;
+    font-family: 'LatoWebLight', Verdana, sans-serif;
+    color: #212121 !important;
+}
+
+#article-list-view article header p {
+    color: #B2EBF2;
+}
+
+
+/* ============ */
+/* Article view */
+/* ============ */
+
+
+#article-view article header {
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+#article-view article .content {
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+    padding: 40px;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+/* ============== */
+/* RESPONSIVENESS */
+/* ============== */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Medium devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+}
