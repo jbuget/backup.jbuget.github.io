@@ -1,0 +1,41 @@
+html {
+  font-family: 'Lato', Helvetica Neue, Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+  color: #ffa500;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.presentation {
+}
+
+.presentation__picture {
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.presentation__picture-image {
+  border-radius: 50%;
+  width: 140px;
+}
