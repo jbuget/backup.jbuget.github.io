@@ -1,23 +1,5 @@
-# SASS
+_site
 .sass-cache
-
-# Logs
-**/logs
-*.log
-
-# Runtime data
-pids
-*.pid
-*.seed
-
-# Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
-
-# Intellij IDEA
-.idea
-jbuget.github.io.iml
-
-*.DS_Store
-Thumbs.db
-db.json
+.jekyll-metadata
+*.iml
+*.idea
