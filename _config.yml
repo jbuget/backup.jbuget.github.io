@@ -1,0 +1,65 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: jbuget.fr
+email: contact@jbuget.fr
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal website of Jérémy Buget, full stack software engineer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jbuget.fr" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Customize navigation links
+# https://github.com/jekyll/minima#customize-navigation-links
+header_pages:
+  - contact.md
+
+# Change default date format
+# https://github.com/jekyll/minima#change-default-date-format
+minima:
+  date_format: "%b %-d, %Y"
+
+# Enabling comments (via Disqus)
+# https://github.com/jekyll/minima#enabling-comments-via-disqus
+disqus:
+  shortname: jbuget
+
+# Social networks
+# https://github.com/jekyll/minima#social-networks
+twitter_username: jbuget
+github_username: jbuget
+linkedin_username: jbuget
+
+# Enabling Google Analytics
+# https://github.com/jekyll/minima#enabling-google-analytics
+google_analytics: UA-93280305-1
